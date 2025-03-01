@@ -1,5 +1,6 @@
-package com.talvin.huffmancode;
+package com.talvin.huffmancode.config;
 
+import com.talvin.huffmancode.HuffmanCodeApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Huffman Encoding</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div class="container">
+    <h1>Huffman Encoding</h1>
+
+    <form action="/huffman/encode" method="post">
+        <label>Введіть текст:</label>
+        <input type="text" name="text" required>
+        <button type="submit">Закодувати</button>
+    </form>
+
+    <div class="result" th:if="${originalText}">
+        <p>Оригінальный текст: <b th:text="${originalText}"></b></p>
+        <p>Закодований текст: <b th:text="${encodedText}"></b></p>
+    </div>
+
+    <form action="/huffman/decode" method="post">
+        <label>Введіть закодований текст:</label>
+        <input type="text" name="encodedText" required>
+        <button type="submit">Декодувати</button>
+    </form>
+
+    <div class="result" th:if="${decodedText}">
+        <p>Росшифрований текст: <b th:text="${decodedText}"></b></p>
+    </div>
+</div>
+</body>
+</html>
